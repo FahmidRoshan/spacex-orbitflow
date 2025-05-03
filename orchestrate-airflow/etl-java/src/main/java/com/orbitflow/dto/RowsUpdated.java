@@ -1,0 +1,1 @@
+package com.orbitflow.dto;import lombok.Data;@Datapublic class RowsUpdated {    private int rowsAdded;    private int rowsDeleted;}
