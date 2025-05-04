@@ -5,12 +5,12 @@ A modular ETL pipeline project that fetches SpaceX launch data using Java, trans
 &nbsp;
 ## 📁 Project Structure
 
-
+```bash
 spacex-orbitflow/
 ├── etl-java/ # Java-based ETL pipeline using Hikari + PostgreSQL
 ├── transform-dbt/ # dbt transformation layer
 └── orchestrate-airflow/ # Airflow orchestration using Docker
-
+```
 
 &nbsp;
 ## ⚙️ Technologies Used
