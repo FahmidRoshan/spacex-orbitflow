@@ -57,9 +57,9 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__FERNET_KEY: 'n3y8TJp6lwWgQ28E8c3AX04BEiDYF5-ahjdGRlRCuoc='
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
@@ -127,7 +127,9 @@ services:
       airflow-init:
         condition: service_completed_successfully
     volumes:
-      - ./path/to/etl-java:/opt/etl-java
+      - ../path/to/etl-java:/opt/etl-java
+      - ../dbt-transformation:/opt/dbt-transformation
+      - ./dags:/opt/airflow/dags
     environment:
       - AIRFLOW__WEBSERVER__SECRET_KEY=S6ujmFhSRZTWgxQLOTjXYg==
       - AIRFLOW__SCHEDULER__SECRET_KEY=S6ujmFhSRZTWgxQLOTjXYg==
@@ -150,6 +152,10 @@ services:
         condition: service_completed_successfully
     environment:
       - AIRFLOW__SCHEDULER__SECRET_KEY=S6ujmFhSRZTWgxQLOTjXYg==
+    volumes:
+      - ../etl-java:/opt/etl-java
+      - ../dbt-transformation:/opt/dbt-transformation
+      - ./dags:/opt/airflow/dags
 
   airflow-worker:
     <<: *airflow-common
@@ -175,6 +181,10 @@ services:
         condition: service_completed_successfully
       airflow-triggerer:
         condition: service_healthy
+    volumes:
+      - ../etl-java:/opt/etl-java
+      - ../dbt-transformation:/opt/dbt-transformation
+      - ./dags:/opt/airflow/dags
 
 
   airflow-triggerer:
@@ -255,8 +265,8 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
-      - ./etl-java:/opt/etl-java
-      - ./transform-dbt:/opt/transform-dbt
+      - ../etl-java:/opt/etl-java
+      - ../transform-dbt:/opt/transform-dbt
 
   airflow-cli:
     <<: *airflow-common
