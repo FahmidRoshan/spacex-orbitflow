@@ -1,0 +1,19 @@
+# Java
+*.class
+*.jar
+target/
+# Python
+__pycache__/
+*.pyc
+# Airflow
+logs/
+airflow.db
+*.pid
+# DBT
+dbt_modules/
+profiles.yml
+# General
+.env
+.idea/
+.vscode/
+.DS_Store

@@ -1,25 +1,3 @@
-[2025-05-02T01:42:01.906+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spacex_orbitflow_etl_dbt.run_java_etl scheduled__2025-05-01T00:00:00+00:00 [queued]>
-[2025-05-02T01:42:01.912+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spacex_orbitflow_etl_dbt.run_java_etl scheduled__2025-05-01T00:00:00+00:00 [queued]>
-[2025-05-02T01:42:01.912+0000] {taskinstance.py:2171} INFO - Starting attempt 2 of 2
-[2025-05-02T01:42:01.920+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): run_java_etl> on 2025-05-01 00:00:00+00:00
-[2025-05-02T01:42:01.945+0000] {standard_task_runner.py:60} INFO - Started process 106 to run task
-[2025-05-02T01:42:01.955+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'spacex_orbitflow_etl_dbt', 'run_java_etl', 'scheduled__2025-05-01T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_orchestrate.py', '--cfg-path', '/tmp/tmp6tzvfde_']
-[2025-05-02T01:42:01.966+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask run_java_etl
-[2025-05-02T01:42:02.094+0000] {task_command.py:423} INFO - Running <TaskInstance: spacex_orbitflow_etl_dbt.run_java_etl scheduled__2025-05-01T00:00:00+00:00 [running]> on host e3b087e51739
-[2025-05-02T01:42:02.227+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='orbitflow' AIRFLOW_CTX_DAG_ID='spacex_orbitflow_etl_dbt' AIRFLOW_CTX_TASK_ID='run_java_etl' AIRFLOW_CTX_EXECUTION_DATE='2025-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-01T00:00:00+00:00'
-[2025-05-02T01:42:02.239+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
-[2025-05-02T01:42:02.244+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/etl-java && ./run.sh ']
-[2025-05-02T01:42:02.256+0000] {subprocess.py:86} INFO - Output:
-[2025-05-02T01:42:02.258+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 1: cd: /opt/etl-java: No such file or directory
-[2025-05-02T01:42:02.258+0000] {subprocess.py:97} INFO - Command exited with return code 1
-[2025-05-02T01:42:02.276+0000] {taskinstance.py:2699} ERROR - Task failed with exception
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
-    result = execute_callable(context=context, **execute_callable_kwargs)
-  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
-    raise AirflowException(
-airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
-[2025-05-02T01:42:02.282+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=spacex_orbitflow_etl_dbt, task_id=run_java_etl, execution_date=20250501T000000, start_date=20250502T014201, end_date=20250502T014202
-[2025-05-02T01:42:02.297+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 22 for task run_java_etl (Bash command failed. The command returned a non-zero exit code 1.; 106)
-[2025-05-02T01:42:02.340+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
-[2025-05-02T01:42:02.364+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f7b9ef0289bea8d3361871c3b6cae1421ed4ba5640b0cc0fac4e2356a5a9ae8
+size 3364
