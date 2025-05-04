@@ -150,7 +150,6 @@ Place your DAG in `dags/orchestrate.py` and monitor it through the UI.
 &nbsp;
 ## Sample DAG Outline (Airflow)
 
-&nbsp;
 ```python
 from airflow import DAG
 from airflow.operators.bash import BashOperator
