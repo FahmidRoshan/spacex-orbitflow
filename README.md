@@ -3,7 +3,7 @@
 A modular ETL pipeline project that fetches SpaceX launch data using Java, transforms it using dbt, and orchestrates it with Apache Airflow. This project demonstrates a complete modern data engineering workflow.
 
 &nbsp;
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 spacex-orbitflow/
@@ -13,7 +13,7 @@ spacex-orbitflow/
 ```
 
 &nbsp;
-## ⚙️ Technologies Used
+## Technologies Used
 
 | Layer         | Stack                                |
 |--------------|---------------------------------------|
@@ -25,13 +25,13 @@ spacex-orbitflow/
 
 ---
 
-## 🎯 Features
+## Features
 
-- ✅ Java-based ETL for fetching and persisting SpaceX API data
-- ✅ Transformations using dbt models with version control
-- ✅ Airflow DAGs to automate and monitor end-to-end flow
-- ✅ Environment-based configuration using `.env`
-- ✅ Modular, scalable, and production-ready setup
+-  Java-based ETL for fetching and persisting SpaceX API data
+-  Transformations using dbt models with version control
+-  Airflow DAGs to automate and monitor end-to-end flow
+-  Environment-based configuration using `.env`
+-  Modular, scalable, and production-ready setup
 
 ---
 
@@ -48,7 +48,7 @@ spacex-orbitflow/
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
