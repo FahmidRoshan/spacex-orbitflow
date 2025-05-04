@@ -9,6 +9,7 @@ __pycache__/
 logs/
 airflow.db
 *.pid
+orchestrate-airflow/logs/
 # DBT
 dbt_modules/
 profiles.yml
