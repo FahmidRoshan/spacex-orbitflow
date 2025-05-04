@@ -56,7 +56,6 @@ spacex-orbitflow/
 git clone https://github.com/FahmidRoshan/spacex-orbitflow.git
 cd spacex-orbitflow
 ```
-&nbsp;
 ### 2. Clone the Repository
 
 #### Requirements:
@@ -78,7 +77,6 @@ cd spacex-orbitflow
     mvn clean install
     java -jar target/etl-java.jar
     ```
-&nbsp;
 ### 3. Setup dbt Transformations (transform-dbt)
 
 #### Requirements:
@@ -117,7 +115,6 @@ spacex:
 dbt run
 ````
 
-&nbsp;
 ### 4. Setup Airflow Orchestration (orchestrate-airflow)
 
 #### Requirements:
